@@ -13,17 +13,17 @@ import com.mam.dsvendas.repositories.SellerRepository;
 @Service
 public class SellerService {
 	
-	
 	//buscar todos do repository
 	@Autowired
 	private SellerRepository repository;
 	
-	public List<SellerDTO> findAll(){		
-		List<Seller> result =  repository.findAll();
+	public List<SellerDTO> findAll() {
+		List<Seller> result = repository.findAll();
 		
 		return result.stream().map(x -> new SellerDTO(x)).collect(Collectors.toList());
-				
 	}
+	
+
 
 }
 
